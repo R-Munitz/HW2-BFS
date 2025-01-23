@@ -122,7 +122,6 @@ class Graph:
                     queue.append(neighbor)
                     parent[neighbor] = current_node #keeping track of path
                     
-        
         #if no end node is given, return list of visited nodes in order of traversal
         if end == None:
             return list(visited_nodes)
