@@ -126,8 +126,9 @@ class Graph:
             while end != None:
                 path.append(end)
                 end = parent[end]
-            #reverse path to get from start to end
-            path[::1]
+
+            #reverse path to get from start to end 
+            path = path[::-1]
             return path
         else:
             print("No path found")
@@ -263,7 +264,7 @@ def main():
     #print(tiny_network_graph.bfs('Luke Gilbert','Martin Kampmann'))
 
     citation_network_graph = Graph('data/citation_network.adjlist')
-    print((citation_network_graph.bfs('32024998','34095129')))
+    print((citation_network_graph.bfs('32024998', 'Tony Capra')))
     #print(citation_network_graph.is_unnconnected('Tony Capra'))
     #print((citation_network_graph.bfs('Tony Capra')))
 

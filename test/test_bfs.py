@@ -53,7 +53,6 @@ def test_bfs():
 
     #testing bfs provides shortest path
     
-
     # valid start and end nodes
     citation_network_graph = graph.Graph('data/citation_network.adjlist')
     start_node = '32024998'
