@@ -14,7 +14,7 @@ def test_bfs_traversal():
     #testing trasversal of all nodes in graph
 
     #test empty graph
-    empty_graph = graph.Graph('data/empty_graph.adjlist')
+    empty_graph = graph.Graph('data/empty.adjlist')
     with pytest.raises(ValueError, match = "Empty graph"):
         empty_graph.bfs(start='')
 
