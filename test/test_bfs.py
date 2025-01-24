@@ -13,6 +13,11 @@ def test_bfs_traversal():
     """
     #testing trasversal of all nodes in graph
 
+    #test empty graph
+    empty_graph = graph.Graph('data/empty_graph.adjlist')
+    with pytest.raises(ValueError, match = "Empty graph"):
+        empty_graph.bfs(start='')
+
     #create Graph object
     tiny_network_graph = graph.Graph('data/tiny_network.adjlist')
 
@@ -72,8 +77,6 @@ def test_bfs():
 
     #create graph with unreachable node
     unconnected_graph = graph.Graph('data/test_unreachable.adjlist')
-
-    #test bfs search returns None for unreachable node
     start_node = '1'
     end_node = '5'
     assert unconnected_graph.bfs(start=start_node, end=end_node) == None
