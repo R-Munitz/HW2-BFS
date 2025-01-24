@@ -50,7 +50,6 @@ def test_bfs():
     Include an additional test for nodes that are not connected 
     which should return None. 
     """
-
     #testing bfs provides shortest path
     
     # valid start and end nodes
@@ -72,14 +71,7 @@ def test_bfs():
     #test unreachable end node / unconnected graph returns None
 
     #create graph with unreachable node
-    unconnected_graph = nx.DiGraph()
-
-    #add nodes and edges
-    unconnected_graph.add_nodes_from([1, 2, 3, 4, 5])
-    unconnected_graph.add_edges_from([(1, 2), (2, 3), (3, 4)])
-
-    #add unreachable node
-    unconnected_graph.add_node(5)
+    unconnected_graph = graph.Graph('data/test_unreachable.adjlist')
 
     #test bfs search returns None for unreachable node
     start_node = '1'
