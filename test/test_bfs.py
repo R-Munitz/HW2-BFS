@@ -78,6 +78,5 @@ def test_bfs():
     end_node = '5'
     assert unconnected_graph.bfs(start=start_node, end=end_node) == None
 
-
     pass
 

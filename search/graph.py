@@ -268,6 +268,11 @@ def main():
     #print(citation_network_graph.is_unnconnected('Tony Capra'))
     #print((citation_network_graph.bfs('Tony Capra')))
 
+    #create graph with unreachable node
+    unconnected_graph = Graph('data/test_unreachable.adjlist')
+    print(unconnected_graph.bfs('2', '5'))
+
+
     '''
    #Extra code, plotting to help visualize graph 
     #plot graph
